@@ -284,7 +284,7 @@ a {
 
 /* Start Special Section */
 .special {
-  background: url(/media/bg-special.jpg) fixed no-repeat;
+  background: url(media/bg-special.jpg) fixed no-repeat;
 }
 .special .card {
   box-sizing: content-box;
