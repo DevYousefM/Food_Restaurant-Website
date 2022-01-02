@@ -1,0 +1,127 @@
+:root {
+  --mainColor: red;
+}
+
+/* Start Changer Color */
+.colorChangerBox {
+  background-color: var(--mainColor);
+}
+.colorChangerBox .cog {
+  color: var(--mainColor);
+}
+
+/* End Changer Color */
+/* Start Scroll To Top Button */
+.scroll-btn {
+  border: 3px solid var(--mainColor);
+}
+.scroll-btn i {
+  color: var(--mainColor);
+}
+/* End Scroll To Top Button */
+/* Start Navbar Section */
+.navbar-brand i {
+  color: var(--mainColor);
+}
+.nav-link:hover,
+.nav-link.active,
+.nav-link:focus,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--mainColor);
+}
+.offcanvas-header button.close-nav i {
+  color: var(--mainColor);
+}
+.navbar-toggler span {
+  color: var(--mainColor);
+}
+.navbar-toggler:focus {
+  box-shadow: var(--mainColor) 0 0 0 0.25rem;
+}
+/* End Navbar Section */
+/* Start Carousel */
+.carousel .content {
+  color: var(--mainColor);
+}
+.carousel .content h1 {
+  color: var(--mainColor);
+}
+.carousel .content button::before {
+  background: var(--mainColor);
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--mainColor);
+}
+/* End Carousel */
+
+/* Start About Section */
+.about mark {
+  color: var(--mainColor);
+}
+.about button::before {
+  background-color: var(--mainColor);
+}
+/* End About Section */
+
+/* Start Special Section */
+.special h1 mark {
+  color: var(--mainColor);
+}
+.special .card button::before {
+  background-color: var(--mainColor);
+}
+/* End Special Section */
+
+/* Start Dishes Section */
+#dishes .heading h1 mark {
+  color: var(--mainColor);
+}
+
+#dishes .box-container .box .info p {
+  border-bottom: 0.2rem solid var(--mainColor);
+  border-top: 0.2rem solid var(--mainColor);
+  margin: 1rem 2rem;
+}
+#dishes .box-container .box .info button::before {
+  background: var(--mainColor);
+}
+/* End Dishes Section */
+
+/* Start Contact Section */
+
+.contact mark {
+  color: var(--mainColor);
+}
+.contact form .form-control:focus {
+  border-color: var(--mainColor);
+}
+.contact form button:hover {
+  border-color: var(--mainColor);
+}
+.contact form button::before {
+  background: var(--mainColor);
+}
+/* End Contact Section */
+
+/* Start Footer Section */
+.footer a {
+  color: var(--mainColor);
+}
+.footer mark {
+  color: var(--mainColor);
+}
+.footer ul li a:hover {
+  color: var(--mainColor);
+}
+.footer form button::before {
+  background-color: var(--mainColor);
+}
+.footer form button:hover {
+  border-color: var(--mainColor);
+}
+.footer form .form-control:focus {
+  border-color: var(--mainColor);
+}
+/* End Footer Section */
+/* All Rights Reserved ElCabtain */
+/* Completed At 1/1/2021 */

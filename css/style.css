@@ -1,0 +1,693 @@
+:root {
+  --mainColor: #fcfc12;
+}
+a {
+  cursor: pointer;
+}
+
+/* Start Changer Color */
+.colorChangerBox {
+  position: fixed;
+  top: 20%;
+  left: -110px;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-around;
+  padding: 3px;
+  transition: 0.8s ease all;
+}
+.visible {
+  left: 0px;
+}
+.colorChangerBox .cog {
+  padding: 6px 8px;
+  background-color: gray;
+}
+.colorChangerBox .cog i {
+  cursor: pointer;
+  line-height: 1.5px;
+}
+.colorChangerBox .colorChanger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.colorChangerBox .colorChanger label {
+  text-align: center;
+  width: 100%;
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+}
+.colorChangerBox .colorChanger .colors {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+.colorChangerBox .colorChanger .color {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid rgba(0, 0, 0, 0.315);
+  margin: 0 4px;
+  background: #000;
+  cursor: pointer;
+}
+.colorChangerBox .colorChanger .color[data-colorNum="1"] {
+  background-color: red;
+}
+.colorChangerBox .colorChanger .color[data-colorNum="2"] {
+  background-color: #66ff00;
+}
+.colorChangerBox .colorChanger .color[data-colorNum="3"] {
+  background-color: #ff00ff;
+}
+.colorChangerBox .colorChanger .color[data-colorNum="4"] {
+  background-color: #00e1ff;
+}
+.colorChangerBox .colorChanger .color[data-colorNum="5"] {
+  background-color: #fcfc12;
+}
+/* End Changer Color */
+
+/* Start Scroll To Top Button */
+.scroll-btn {
+  cursor: pointer;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 9999;
+  padding: 5px 6px;
+  display: none;
+  background-color: gray;
+}
+.scroll-btn i {
+  font-size: 12px;
+  cursor: pointer;
+}
+/* End Scroll To Top Button */
+
+/* Start Navbar Section */
+.navbar {
+  transition: 0.5s all ease;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+.container-fluid.custom-style {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.navbar-brand {
+  float: right;
+}
+.navbar-brand i {
+  font-size: 35px;
+}
+.nav-link {
+  font-size: 21px;
+  color: white;
+}
+.offcanvas.show {
+  background-color: #191919;
+}
+.offcanvas.show ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offcanvas.show ul li {
+  height: 7vh;
+}
+.offcanvas-header button.close-nav {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.offcanvas-header button.close-nav i {
+  background-color: transparent;
+  font-size: 30px;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+}
+@media (max-width: 600px) {
+  .navbar-toggler {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.2rem;
+  }
+  .navbar .navbar-brand {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+  }
+  .navbar-brand i {
+    font-size: 1.5rem;
+  }
+}
+/* End Navbar Section */
+
+/* Start Carousel */
+.carousel {
+  position: relative;
+}
+.carousel .content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  color: #fcfc12;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.carousel .content h1 {
+  font-family: "lemonada", sans-serif;
+  font-weight: bolder;
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+  color: #fff200;
+}
+
+.carousel .content h2 {
+  font-family: "lemonada", sans-serif;
+  font-weight: bolder;
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+  color: #fff;
+  margin: 1rem 0;
+}
+.carousel .content p {
+  color: #ccc;
+}
+.carousel .content button {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #333;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 2.5rem;
+  width: 10rem;
+  background: #fff;
+}
+.carousel .content button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -1;
+}
+.carousel .content button:hover::before {
+  width: 100%;
+}
+.carousel-indicators [data-bs-target] {
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+@media (max-width: 600px) {
+  .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+}
+@media (max-width: 680px) {
+  .carousel .content h1 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+  .carousel .content h2 {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    line-height: 0;
+  }
+  .carousel .content p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 0.5rem;
+    line-height: 12px;
+  }
+  .carousel .content button {
+    border-radius: 5rem;
+    height: 1rem;
+    width: 5rem;
+    font-size: 10px;
+    margin-top: 0px;
+  }
+}
+/* End Carousel */
+
+/* Start About Section */
+.about mark {
+  background-color: transparent;
+}
+.about {
+  color: black;
+}
+.about button {
+  font-weight: 600;
+
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.about button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+}
+.about button:hover::before {
+  width: 100%;
+}
+.about button:hover {
+  color: black;
+}
+
+/* End About Section */
+
+/* Start Special Section */
+.special {
+  background: url(/media/bg-special.jpg) fixed no-repeat;
+}
+.special .card {
+  box-sizing: content-box;
+}
+.special > .container-fluid > h1,
+.special > .container-fluid > p {
+  color: white;
+}
+.special h1 mark {
+  background-color: transparent;
+}
+.special .card {
+  transition: 0.7s;
+  transform: scale(0.9);
+}
+.special .card:hover {
+  transform: scale(1.1);
+}
+.special .card button {
+  border-radius: 20px;
+  font-weight: 600;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.special .card button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+}
+.special .card button:hover::before {
+  width: 100%;
+}
+.special .card button:hover {
+  color: black;
+}
+
+/* Start Media Query Special Section */
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .special .card {
+    width: 83.666667%;
+    transition: 0.7s;
+    transform: scale(1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .special .card:hover {
+    transform: scale(1);
+  }
+  .special .card img {
+    width: 91.66666667%;
+  }
+}
+
+/* End Media Query Special Section */
+
+/* End Special Section */
+
+/* Start Dishes Section */
+
+#dishes {
+  min-height: 70vh;
+  color: #fff;
+}
+
+#dishes .heading h1 mark {
+  background-color: transparent;
+}
+
+#dishes .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#dishes .box-container .box {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6) !important;
+}
+
+#dishes .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#dishes .box-container .box .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  background: rgba(51, 51, 51, 0.6);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  color: #fff;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+#dishes .box-container .box .info p {
+  margin: 1rem 2rem;
+}
+
+#dishes .box-container .box .info button {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #333;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 2rem;
+  width: 8rem;
+}
+
+#dishes .box-container .box .info button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+#dishes .box-container .box .info button:hover::before {
+  width: 100%;
+}
+
+#dishes .box-container .box:hover .info {
+  transition: 0.5s all ease;
+  transform: scale(1);
+}
+/* End Disheses Section */
+
+/* Start Contact Section */
+
+.contact {
+  background: url(/media/contact-bg.jpg) no-repeat;
+}
+.contact mark {
+  background: transparent;
+}
+.contact form {
+  background-color: white;
+  border-radius: 15px;
+}
+.contact form .form-control:focus {
+  outline: 0;
+}
+.contact form button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.contact form button,
+.contact form button:focus,
+.contact form button:active {
+  background-color: black;
+  border-color: transparent;
+  color: white;
+  font-weight: 700;
+  border-radius: 30px;
+  outline: none;
+}
+.contact form button:hover {
+  background-color: black;
+  opacity: 0.9;
+  color: black;
+  transition: 0.5s;
+}
+.contact form button:focus {
+  box-shadow: 0 0 0 0.25rem rgb(66 70 73 / 50%);
+}
+.contact form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+/* End Contact Section */
+
+/* Start Footer Section */
+.footer {
+  color: #fff;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer mark {
+  background-color: transparent;
+  font-weight: 700;
+}
+.footer ul li a {
+  color: white;
+}
+.footer ul li .nav-link.active,
+.footer ul li .nav-link:focus {
+  color: white;
+}
+.footer form button {
+  position: relative;
+  z-index: 0;
+  background-color: black;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 20px;
+  overflow: hidden;
+  border-color: #000;
+  font-size: 13.5px;
+}
+.footer form button:active,
+.footer form button:focus {
+  box-shadow: 0 0 0 0.25rem rgb(66 70 73 / 50%);
+  background-color: black;
+  border-color: transparent;
+  color: #fff;
+}
+.footer form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border: none;
+  outline: none;
+  transition: 0.5s ease-in-out all;
+  z-index: -1;
+}
+.footer form button:hover {
+  transition: 0.5s ease-in-out all;
+  background-color: #fff;
+  color: #000;
+}
+.footer form button:hover::before {
+  width: 100%;
+}
+.footer form .form-control:focus {
+  background-color: #fff;
+  outline: 0;
+}
+@media (max-width: 1100px) {
+  .footer form button {
+    font-size: 12px;
+  }
+  .footer ul li a.nav-link {
+    font-size: 18px;
+  }
+  .footer a i {
+    font-size: 2.5rem;
+  }
+  .footer .map {
+    transform: translate(80px, 0);
+  }
+}
+@media (max-width: 992px) {
+  .footer div.col-4 {
+    width: 36.333333%;
+  }
+  .footer .map {
+    transform: translate(80px, 0);
+  }
+  .footer form button {
+    font-size: 10px;
+    width: 45%;
+  }
+  .footer form h5 {
+    font-size: 15px;
+  }
+  .footer form .form-control {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .footer form p {
+    font-size: 10px;
+  }
+  .footer ul {
+    margin-right: 10px;
+    transform: translate(-7px, 0);
+  }
+  .footer ul li a.nav-link {
+    font-size: 12px;
+  }
+  .footer a i {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer div.col-4 {
+    width: 36.333333%;
+  }
+  .footer form button {
+    font-size: 11px;
+    width: 40%;
+  }
+  .footer .map {
+    transform: translate(80px, 0);
+  }
+  .footer form h5 {
+    font-size: 10px;
+  }
+  .footer form p {
+    font-size: 7px;
+  }
+  .footer ul li a.nav-link {
+    font-size: 12px;
+  }
+  .footer a i {
+    font-size: 1.5rem;
+  }
+  .footer a i.fa-utensils {
+    font-size: 3rem;
+  }
+  .footer footer .lead {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .footer div.col-4 {
+    width: 36.333333%;
+  }
+  .footer form button {
+    font-size: 11px;
+    width: 40%;
+  }
+  .footer .map {
+    transform: translate(0, 0);
+  }
+  .footer form h5 {
+    font-size: 10px;
+  }
+  .footer form p {
+    font-size: 7px;
+  }
+  .footer ul li a.nav-link {
+    font-size: 12px;
+  }
+  .footer a i {
+    font-size: 1rem;
+  }
+  .footer a i.fa-utensils {
+    font-size: 3rem;
+  }
+  .footer footer .lead {
+    font-size: 0.8rem;
+  }
+  .footer .map {
+    transform: translate(0, 0);
+  }
+  .footer div.offset-1 {
+    margin-left: 1.333333%;
+    margin-top: 1rem;
+  }
+}
+/* End Footer Section */
+/* All Rights Reserved ElCabtain */
+/* Completed At 1/1/2021 */
