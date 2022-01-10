@@ -284,7 +284,7 @@ a {
 
 /* Start Special Section */
 .special {
-  background: url(media/bg-special.jpg) fixed no-repeat;
+  background: url(../media/bg-special.jpg) fixed no-repeat;
 }
 .special .card {
   box-sizing: content-box;
@@ -464,7 +464,7 @@ a {
 /* Start Contact Section */
 
 .contact {
-  background: url(/media/contact-bg.jpg) no-repeat;
+  background: url(../media/contact-bg.jpg) no-repeat;
 }
 .contact mark {
   background: transparent;
