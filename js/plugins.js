@@ -1,5 +1,3 @@
-// jQuary Code
-
 // JS Pure Code
 
 let buttonAbearsOptions = document.querySelector(".cog i"),
@@ -51,22 +49,33 @@ if (window.innerWidth > "800") {
   console.log("ElCaptain .Inc");
 }
 
-/* Scrolling To Sections */
-let links = document.querySelectorAll(".linkNav");
+let menu = document.getElementById("menu"),
+  menuFooter = document.getElementById("menuFooter");
 
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    let sec = document.getElementById(link.getAttribute("data-section"));
-    sec.scrollIntoView({
+menu.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.dataset.section) {
+    document
+      .getElementById(`${e.target.dataset.section}`)
+      .scrollIntoView({ behavior: "smooth" });
+  }
+});
+menuFooter.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.dataset.section) {
+    document
+      .getElementById(`${e.target.dataset.section}`)
+      .scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+let scrollTop = document.querySelectorAll(".home");
+
+scrollTop.forEach((ele) => {
+  ele.onclick = () => {
+    window.scrollTo({
+      top: 0,
       behavior: "smooth",
-      block: "start",
     });
-
-    
-
-    let offcanvas = document.querySelector(".offcanvas"),
-      offcanvas_backdrop = document.querySelector(".offcanvas-backdrop");
-    offcanvas.classList.remove("show");
-    offcanvas_backdrop.remove();
-  });
+  };
 });
