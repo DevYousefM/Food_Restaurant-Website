@@ -72,42 +72,36 @@
           ><i class="fas fa-times"></i></button>
         </div>
         <div class="h-100 offcanvas-body">
-          <ul class="navbar-nav me-auto mb-lg-0">
+          <ul class="navbar-nav me-auto mb-lg-0" id="menu">
             <li class="nav-item">
-              <a class="nav-link active home" href="#" aria-current="page" data-section="home">Home</a>
+              <a class="nav-link active home" >Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" data-section="about" >About</a>
+              <a  class="nav-link linkNav" data-section="about"  >About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" data-section="special">Special</a>
+              <a class="nav-link linkNav" data-section="special"  >Special</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" data-section="dishes">Dishes</a>
+              <a class="nav-link linkNav" data-section="dishes"  >Dishes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkNav" data-section="contact">Contact</a>
+              <a class="nav-link linkNav" data-section="contact"  >Contact</a>
             </li>
           </ul>
         </div>
       </div>
       </div>
     </nav>
-
     <!-- End Navbar  -->
-    
-        <!-- Start Home Section -->
-    
+    <!-- Start Home Section -->
     <!-- Carousel Start -->
-    
-    <section id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      
+    <section id="carouselExampleIndicators home" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
-      
       <div class="carousel-inner">
         <div class="carousel-item active">
           <video muted loop autoplay src="media/video.mp4" class="d-block w-100">
@@ -119,9 +113,7 @@
           <video muted loop autoplay src="media/video3.mp4" class="d-block w-100">
         </div>
       </div>
-
       <!-- Content Start -->
-      
       <div class="content">
         <div class="container">
           <h1>food that you can't resist</h1>
@@ -130,16 +122,11 @@
           <a href="#special"><button>get started</button></a>
         </div>
       </div>
-      
       <!-- Content End -->
     </section>
-
     <!-- Carousel End -->
-    
     <!-- End Home Section -->
-    
-        <!-- Start About Section -->
-
+    <!-- Start About Section -->
         <section class="about pt-3 text-center bg-light" id="about">
           <div class="container">
             <h1><mark>About</mark>Us</h1>
@@ -193,11 +180,8 @@
             </div>
           </div>
         </section>
-    
         <!-- End About Section -->
-
     <!-- Start Special Section -->
-
     <section class="special py-4 bg-dark text-center" id="special">
       <div class="container-fluid">
         <h1>Our <mark>Special</mark></h1>
@@ -389,21 +373,21 @@
           </a>
         </div>
         <div class="col-5 ms-lg-5 map" >
-          <ul class="nav justify-content-center">
+          <ul class="nav justify-content-center" id="menuFooter">
             <li class="nav-item">
-              <a href="#" class="nav-link px-2">Home</a>
+              <a href="#" class="nav-link px-2 home">Home</a>
+            </li>
+            <li class="nav-item"> 
+              <a href="#" class="nav-link px-2" data-section="about">About</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2">About</a>
+              <a href="#" class="nav-link px-2" data-section="special">Special</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2">Special</a>
+              <a href="#" class="nav-link px-2" data-section="dishes">Dishes</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2">Dishes</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2">Contact Us</a>
+              <a href="#" class="nav-link px-2" data-section="contact">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -429,7 +413,7 @@
       <footer class="border-top pt-2">
         <div class="d-flex justify-content-between">
           <p class="lead">© 2021 <a href=""><mark>ElCaptain, Inc.</mark></a> All rights reserved.</p>
-          <ul class="list-unstyled d-flex">
+          <ul class="list-unstyled d-flex" >
             <li class="ms-2">
               <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
             </li>
